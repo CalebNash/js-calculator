@@ -9,7 +9,7 @@ The goal is to create a working calculator, identical in functionality to Calcul
 ### Layout
 * Add all of the buttons
 * Style the buttons to appear on a grid
-* Style the buttons, either copying exactly the Calculator.app style, or exercising your creativity to create a different style if you so choose
+* Style the buttons, either copying exactly the Calculator.app  style, or exercising your creativity to create a different style if you so choose
 * Make the buttons appear 3D and use CSS to "press" the button when clicked
 ### JavaScript
 **You are not allowed to use the JavaScript function `eval`**
