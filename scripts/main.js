@@ -5,7 +5,8 @@ var calculation = [];
 
 function pushNumber(event) {
   alert(event.target.value);
-  calculation.push(event.target.value);
+  let value = event.target.value;
+  calculation.push(value);
   console.log(calculation);
 
 }
@@ -16,6 +17,9 @@ $numberButtons.forEach(button => {
 
 function pushOperator(event) {
   alert(event.target.value);
+  let value = event.target.value;
+  calculation.push(value);
+  console.log(calculation);
 }
 
 $operatorButtons.forEach(button => {
@@ -24,5 +28,25 @@ $operatorButtons.forEach(button => {
 
 function pushEqual(event) {
   alert(event.target.value);
+  let fullNum1 = "";
+  let fullNum2 = "";
+  let operator = "";
+
+  for(var i = 0; i < calculation.length; i++){
+    if(calculation[i] === '+' || calculation[i] === '-' ||calculation[i] === '*' || calculation[i] === '\/'){
+      operator = calculation[i];
+    }
+  else if(operator){
+    fullNum2 = fullNum2 + calculation[i];
+  }
+  else {
+    fullNum1 = fullNum1 + calculation[i];
+  }
+    console.log(operator);
+    console.log(fullNum1);
+    console.log(fullNum2);
+  }
+  alert(operator);
+//console.log(fullNum1);
 }
   $equalButton.addEventListener("click", pushEqual);
